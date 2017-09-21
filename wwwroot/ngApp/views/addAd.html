@@ -1,0 +1,51 @@
+<form ng-submit="controller.addAd()">
+    <br>
+    <input type="hidden" ng-model="controller.ad.adId" required></input>
+    <br>
+    <label>Title</label>
+    <br>
+    <input type="text" ng-model="controller.ad.title" required></input>
+    <br>
+    <label>Description</label>
+    <br>
+    <input type="text" rows="10" ng-model="controller.ad.description" required></input>
+    <br>
+    <label>Price</label>
+    <br>
+    <input type="number" ng-model="controller.ad.price" required></input>
+    <br>
+    <label>Street</label>
+    <br>
+    <input type="text" ng-model="controller.ad.street" required></input>
+    <br>
+    <label>City</label>
+    <br>
+    <input type="text" ng-model="controller.ad.city" required></input>
+    <br>
+    <label>State</label>
+    <br>
+    <select ng-model="controller.ad.state">
+        <option value="AZ">AZ</option>
+        <option value="CA">CA</option>
+    </select>
+    <br>
+    <label>ZIP</label>
+    <br>
+    <input type="number" ng-model="controller.ad.zip" required></input>
+    <br>
+    <label>Email</label>
+    <br>
+    <input type="text" ng-model="controller.ad.email" required></input>
+    <br>
+    <label>Phone</label>
+    <br>
+    <input type="text" ng-model="controller.ad.phone" required></input>
+    <br>
+    <label>Category</label>
+    <br>
+    <select ng-model="controller.ad.categoryId">
+        <option ng-repeat="category in controller.categories" value="{{ category.categoryId }}">{{category.name}}</option>
+    </select>
+    <input type="submit" value="Save Changes"></input>
+</form>
+<button ng-click="controller.cancel()">Cancel</button>

@@ -1,0 +1,15 @@
+<header class="w3-container w3-theme w3-card-2">
+    <h1>Category: {{controller.category.name}}</h1>
+</header>
+
+
+
+<div class="w3-container w3-text-theme">
+    <div ng-repeat="ad in controller.category.ads" class="w3-card w3-col s4">
+        <ul>
+            <li><a ng-click="controller.getDetails(ad.adId)" href="">{{ad.price|currency}}</a></li>
+            <li><a ng-click="controller.getDetails(ad.adId)" href=""><img ng-src="{{ controller.getImgUrl(ad.images) }}"></a></li>
+            <li><a ng-click="controller.getDetails(ad.adId)" href="">{{ad.title}}</a></li>
+        </ul>
+    </div>
+</div>

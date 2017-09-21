@@ -1,0 +1,16 @@
+<header class="w3-container w3-theme w3-card-2">
+        <h1>Ad Details View</h1>
+</header>
+<h2>
+        {{ controller.ad.title }} 
+</h2>
+<div>
+        <!-- {{ controller.ad.images }} -->
+        <img ng-src="{{ controller.getImgUrl(ad.images) }}">
+</div>
+<div>
+        Price: {{ controller.ad.price | currency }}
+</div>
+<div>
+        Description: {{ controller.ad.description }}                
+</div>

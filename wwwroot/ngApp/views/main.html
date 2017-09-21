@@ -1,0 +1,14 @@
+<header class="w3-container w3-theme w3-card-2">
+    <h1>Categories View</h1>
+</header>
+
+
+<div class="w3-container w3-text-theme">
+<div><strong>Categories</strong> </div>
+    <div class="cat">
+        <div ng-repeat="category in controller.categories">
+            <a ui-sref="category({id: category.categoryId})">{{ category.name }}</a>
+        </div>
+    </div>
+        
+</div>
